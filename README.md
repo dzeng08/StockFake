@@ -1,0 +1,2 @@
+# StockFake
+Stockfish but worse
