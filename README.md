@@ -1,6 +1,9 @@
 # StockFake
 Stockfish but worse
 
+Video Explanation here: https://youtu.be/rWAZO_xtaVw
+Be warned of crappy mic, lots of stuttering, and 37 minutes of boring chess programming.
+
 A lot of features are in this engine. Possibly the one that I'm most proud of is NNUE, since it's pretty powerful. 
 NNUE is kind of like a cheat code, since I hate making hand-crafted evaluation and NNUE allows me to evaluate king safety without the pain of tuning evaluation parameters.
 Compared to PeSTO tables, NNUE is about 270 ELO better. PeSTO tables are specially Texel-tuned piece square tables, which are about 200 ELO better than normal
