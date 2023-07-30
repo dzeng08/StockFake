@@ -2,6 +2,7 @@
 Stockfish but worse
 
 Video Explanation here: https://youtu.be/rWAZO_xtaVw
+
 Be warned of crappy mic, lots of stuttering, and 37 minutes of boring chess programming.
 
 A lot of features are in this engine. Possibly the one that I'm most proud of is NNUE, since it's pretty powerful. 
