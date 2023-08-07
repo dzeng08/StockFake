@@ -114,6 +114,7 @@ void UCILoop() {
 			// time setting
 			int wtime = -1;
 			int btime = -1;
+			int movestogo = 10000;
 
 			int index = line.find("wtime");
 			int lastIndex;
@@ -130,6 +131,14 @@ void UCILoop() {
 				lastIndex = line.find(" ", index);
 
 				btime = stoi(line.substr(index, lastIndex - index));
+			}
+
+			index = line.find("movestogo");
+			if (index != string::npos) {
+				index += 10;
+				lastIndex = line.find(" ", index);
+
+				movestogo = stoi(line.substr(index, lastIndex - index));
 			}
 
 			int timeToUse;
@@ -157,7 +166,7 @@ void UCILoop() {
 					halfMovesLeft = 5 * matCount / 4 - 30;
 				}
 
-				timeLimit = timeToUse / halfMovesLeft;
+				timeLimit = timeToUse / std::min(movestogo, halfMovesLeft);
 			}
 			else {
 				timeLimit = 5000;

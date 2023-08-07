@@ -94,6 +94,8 @@
     <None Include="finalBook.bin">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="network.nn" />
+    <None Include="network.nn">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
