@@ -75,19 +75,17 @@ void UCILoop() {
 			cout << "readyok" << endl;
 		}
 		else if (line == "ucinewgame") {
-			;
+			tt.resetTable();
 		}
 
 		if (line.substr(0, 8) == "position") {
 			if (line.substr(9, 8) == "startpos") {
 				position.resetBoard();
-				tt.resetTable();
 				Position::set(DEFAULT_FEN, position);
 				s = Search(&position);
 			}
 			else if (line.substr(9, 3) == "fen") {
 				position.resetBoard();
-				tt.resetTable();
 				Position::set(line.substr(13, line.find("moves" - 13)), position);
 				s = Search(&position);
 			}
